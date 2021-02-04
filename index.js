@@ -27,6 +27,7 @@ function loadUI() {
 
 function createWindow() {
 	const win = new BrowserWindow({
+		icon: join(__dirname, 'installer-ui', 'src', 'assets', 'logo.png'),
 		width: 800,
 		height: 600,
 		webPreferences: {
@@ -35,6 +36,8 @@ function createWindow() {
 	})
 
 	win.loadURL('http://localhost:3000');
+
+	win.setIcon(join(__dirname, 'installer-ui', 'src', 'assets', 'logo.png'));
 }
 
 Promise.all([
